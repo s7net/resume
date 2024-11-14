@@ -14,13 +14,33 @@ export async function GET(request: Request) {
       <html>
         <head>
           <style>
+            @page {
+              margin: 32px;
+              size: A4;
+            }
+
             body {
               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
               margin: 0;
-              padding: 32px;
               color: #111;
               max-width: 1200px;
               margin: 0 auto;
+            }
+
+            /* Prevent orphaned headers */
+            h1, h2 {
+              break-after: avoid-page;
+            }
+
+            /* Keep items together when possible */
+            .item {
+              break-inside: avoid-page;
+            }
+
+            /* Force section headers to new pages if needed */
+            .section {
+              break-before: auto;
+              break-after: auto;
             }
 
             h1 {
@@ -114,7 +134,9 @@ export async function GET(request: Request) {
 
           <div class="section">
             <h2 class="section-title">Work</h2>
-            ${work.map(item => `
+            ${work
+              .map(
+                (item) => `
               <div class="item">
                 <div class="item-left">
                   <div class="item-title">${item.title}</div>
@@ -122,17 +144,25 @@ export async function GET(request: Request) {
                   <div class="item-location">${item.location}</div>
                 </div>
                 <div class="item-right">
-                  ${item.description.map(desc => `
+                  ${item.description
+                    .map(
+                      (desc) => `
                     <div class="item-description">${desc}</div>
-                  `).join('')}
+                  `
+                    )
+                    .join("")}
                 </div>
               </div>
-            `).join('')}
+            `
+              )
+              .join("")}
           </div>
 
           <div class="section">
             <h2 class="section-title">Education</h2>
-            ${education.map(item => `
+            ${education
+              .map(
+                (item) => `
               <div class="item">
                 <div class="item-left">
                   <div class="item-title">${item.title}</div>
@@ -140,44 +170,66 @@ export async function GET(request: Request) {
                   <div class="item-location">${item.location}</div>
                 </div>
                 <div class="item-right">
-                  ${item.description.map(desc => `
+                  ${item.description
+                    .map(
+                      (desc) => `
                     <div class="item-description">${desc}</div>
-                  `).join('')}
+                  `
+                    )
+                    .join("")}
                 </div>
               </div>
-            `).join('')}
+            `
+              )
+              .join("")}
           </div>
 
           <div class="section">
             <h2 class="section-title">Projects</h2>
-            ${projects.map(item => `
+            ${projects
+              .map(
+                (item) => `
               <div class="item">
                 <div class="item-left">
                   <div class="item-title">${item.title}</div>
                 </div>
                 <div class="item-right">
-                  ${item.description.map(desc => `
+                  ${item.description
+                    .map(
+                      (desc) => `
                     <div class="item-description">${desc}</div>
-                  `).join('')}
+                  `
+                    )
+                    .join("")}
                 </div>
               </div>
-            `).join('')}
+            `
+              )
+              .join("")}
           </div>
 
           <div class="section">
             <h2 class="section-title">Open Source</h2>
-            ${openSource.map(item => `
+            ${openSource
+              .map(
+                (item) => `
               <div class="item">
                 <div class="item-left">
                   <div class="item-title">${item.title}</div>
                 </div>
                 <div class="item-right">
-                  ${item.description.map(desc => `
+                  ${item.description
+                    .map(
+                      (desc) => `
                     <div class="item-description">${desc}</div>
-                  `).join('')}
+                  `
+                    )
+                    .join("")}
                 </div>
               </div>
-            `).join('')}
+            `
+              )
+              .join("")}
           </div>
         </body>
       </html>
@@ -186,13 +238,15 @@ export async function GET(request: Request) {
     await page.setContent(html);
 
     const pdf = await page.pdf({
-      format: 'a4',
+      format: "a4",
       printBackground: true,
+      preferCSSPageSize: true,
+      displayHeaderFooter: false,
       margin: {
-        top: "0mm",
-        right: "0mm",
-        bottom: "0mm",
-        left: "0mm",
+        top: "32px",
+        right: "32px",
+        bottom: "32px",
+        left: "32px",
       },
     });
 
@@ -200,14 +254,14 @@ export async function GET(request: Request) {
 
     return new NextResponse(pdf, {
       headers: {
-        'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="resume.pdf"',
+        "Content-Type": "application/pdf",
+        "Content-Disposition": 'attachment; filename="resume.pdf"',
       },
     });
   } catch (error) {
-    console.error('Error generating PDF:', error);
+    console.error("Error generating PDF:", error);
     return NextResponse.json(
-      { error: 'Failed to generate PDF' },
+      { error: "Failed to generate PDF" },
       { status: 500 }
     );
   }
