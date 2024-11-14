@@ -15,6 +15,17 @@
     print-color-adjust: exact !important;
   }
 
+  /* Disable All Animations */
+  .fade-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  [class*="!delay-"] {
+    animation-delay: 0ms !important;
+  }
+
   /* Layout Adjustments */
   main {
     padding: 0 !important;
