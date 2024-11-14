@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import puppeteer from "puppeteer";
 import { intro, work, education, projects, openSource } from "@/lib/content";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     const browser = await puppeteer.launch({
       headless: true,

@@ -1,6 +1,6 @@
 import { intro, work, education, projects, openSource } from "@/lib/content";
 import type { Intro } from "@/lib/content";
-import { Copy } from "./copy";
+import { Copy } from "@/components/copy";
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
 import { DownloadPDF } from "@/components/download";
