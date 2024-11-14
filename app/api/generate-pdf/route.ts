@@ -56,14 +56,14 @@ export async function GET(request: Request) {
             }
 
             .nav-item {
-              font-size: 13px;
+              font-size: 12px;
               color: #111;
               text-decoration: none;
               border-bottom: 1px solid #111;
             }
 
             .about {
-              font-size: 13px;
+              font-size: 12px;
               line-height: 1.5;
               margin-bottom: 32px;
               color: #666;
@@ -75,7 +75,7 @@ export async function GET(request: Request) {
             }
 
             .section-title {
-              font-size: 24px;
+              font-size: 20px;
               font-weight: 400;
               margin-bottom: 24px;
             }
@@ -84,8 +84,8 @@ export async function GET(request: Request) {
               display: grid;
               grid-template-columns: 200px 1fr;
               gap: 16px;
-              margin-bottom: 24px;
-              padding-bottom: 24px;
+              margin-bottom: 18px;
+              padding-bottom: 18px;
               border-bottom: 1px solid #eee;
             }
 
