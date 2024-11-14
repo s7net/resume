@@ -65,18 +65,12 @@ export function DownloadPDF() {
       const addText = (
         text: string,
         fontSize: number,
-        {
-          bold = false,
-          column = 0,
-          columnSpan = 12,
-          align = "left",
-          spacing = 0,
-        } = {}
+        { column = 0, columnSpan = 12, align = "left", spacing = 0 } = {}
       ) => {
         if (!text) return;
 
         pdf.setFontSize(fontSize);
-        pdf.setFont("helvetica", bold ? "bold" : "normal");
+        pdf.setFont("helvetica", "normal");
 
         const maxWidth =
           columnSpan * columnWidth + (columnSpan - 1) * page.grid.gutter;
@@ -109,7 +103,7 @@ export function DownloadPDF() {
       };
 
       // Header
-      addText(intro.name, 24, { bold: true, spacing: 2 });
+      addText(intro.name, 28, { spacing: 3 });
       yPos += 4;
       addText(intro.about, 10, { columnSpan: 8, spacing: 1 });
       yPos += 8;
@@ -127,7 +121,6 @@ export function DownloadPDF() {
         addText(item.label.toUpperCase(), 7, {
           column,
           columnSpan: 3,
-          bold: true,
         });
         addText(item.value, 8, { column, columnSpan: 3 });
       });
@@ -136,7 +129,7 @@ export function DownloadPDF() {
       addDivider();
 
       // Work Experience
-      addText("WORK EXPERIENCE", 12, { bold: true });
+      addText("WORK EXPERIENCE", 14, { spacing: 2 });
       yPos += 8;
 
       work.forEach((item, index) => {
@@ -144,7 +137,7 @@ export function DownloadPDF() {
         checkPageBreak(40);
 
         // Title and date in a grid
-        addText(item.title, 10, { bold: true, columnSpan: 8 });
+        addText(item.title, 11, { columnSpan: 8 });
         addText(item.date || "", 9, {
           column: 8,
           columnSpan: 4,
@@ -162,14 +155,14 @@ export function DownloadPDF() {
       addDivider();
 
       // Education
-      addText("EDUCATION", 12, { bold: true });
+      addText("EDUCATION", 14, { spacing: 2 });
       yPos += 8;
 
       education.forEach((item, index) => {
         if (index > 0) yPos += 4;
         checkPageBreak(30);
 
-        addText(item.title, 10, { bold: true, columnSpan: 8 });
+        addText(item.title, 11, { columnSpan: 8 });
         addText(item.date || "", 9, {
           column: 8,
           columnSpan: 4,
@@ -187,14 +180,14 @@ export function DownloadPDF() {
       addDivider();
 
       // Projects
-      addText("PROJECTS", 12, { bold: true });
+      addText("PROJECTS", 14, { spacing: 2 });
       yPos += 8;
 
       projects.forEach((item, index) => {
         if (index > 0) yPos += 4;
         checkPageBreak(30);
 
-        addText(item.title, 10, { bold: true, columnSpan: 8 });
+        addText(item.title, 11, { columnSpan: 8 });
         yPos += 4;
 
         item.description.forEach((desc) => {
@@ -206,14 +199,14 @@ export function DownloadPDF() {
       addDivider();
 
       // Open Source
-      addText("OPEN SOURCE", 12, { bold: true });
+      addText("OPEN SOURCE", 14, { spacing: 2 });
       yPos += 8;
 
       openSource.forEach((item, index) => {
         if (index > 0) yPos += 4;
         checkPageBreak(30);
 
-        addText(item.title, 10, { bold: true, columnSpan: 8 });
+        addText(item.title, 11, { columnSpan: 8 });
         yPos += 4;
 
         item.description.forEach((desc) => {
@@ -222,6 +215,7 @@ export function DownloadPDF() {
       });
 
       // Save PDF
+
       pdf.save("resume.pdf");
 
       toast.dismiss(loadingToastId);
