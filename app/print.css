@@ -1,68 +1,119 @@
 @media print {
+  /* Page Setup */
+  @page {
+    size: letter;
+    margin: 1.5cm !important;
+  }
 
-    /* Reset page margins and colors */
-    @page {
-        margin: 0cm;
-    }
+  /* Base Styles */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 
-    body {
-        background: white !important;
-        color: black !important;
-        font-size: 10pt !important;
-        line-height: 1.2 !important;
-    }
+  /* Layout Adjustments */
+  main {
+    padding: 0 !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    gap: 1.5rem !important;
+  }
 
-    /* Hide links */
-    a {
-        color: black !important;
-        text-decoration: none !important;
-    }
+  /* Typography */
+  h1 {
+    font-size: 16pt !important;
+    margin-bottom: 0.5rem !important;
+  }
 
-    .dont-print {
-        display: none !important;
-        content: none !important;
-    }
+  h2 {
+    font-size: 13pt !important;
+    margin-bottom: 0.75rem !important;
+    color: black !important;
+    border-bottom: 1px solid #ddd !important;
+    padding-bottom: 0.25rem !important;
+  }
 
-    a[href^="http"]:after {
-        content: none !important;
-    }
+  h3 {
+    font-size: 11pt !important;
+    margin-bottom: 0.25rem !important;
+  }
 
-    /* Enhance text readability */
-    .text-muted-foreground {
-        color: #333 !important;
-        opacity: 0.9 !important;
-    }
+  p {
+    margin: 0 !important;
+  }
 
-    /* Optimize layout and spacing */
-    main {
-        padding: 0 !important;
-        max-width: none !important;
-        margin: 0 !important;
-    }
+  /* Links */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
 
-    /* Handle page breaks */
-    section {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        margin-bottom: 1cm !important;
-    }
+  .dont-print {
+    display: none !important;
+  }
 
-    h1,
-    h2,
-    h3 {
-        break-after: avoid;
-        page-break-after: avoid;
-    }
+  /* Grid Layouts */
+  .grid {
+    display: grid !important;
+    gap: 0.75rem !important;
+  }
 
-    /* Hide non-essential elements */
-    .print-hide {
-        display: none !important;
-    }
+  .sm\:grid-cols-\[1fr_2fr\] {
+    grid-template-columns: 1fr 2fr !important;
+  }
 
-    /* Remove background colors and shadows */
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        box-shadow: none !important;
-    }
+  /* Section Spacing */
+  section {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 1rem !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  /* Text Colors */
+  .text-muted-foreground {
+    color: #444 !important;
+    opacity: 1 !important;
+  }
+
+  /* Page Breaks */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid !important;
+    break-before: auto !important;
+  }
+
+  /* Remove Animations and Effects */
+  * {
+    animation: none !important;
+    transition: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  /* Divide Lines */
+  .divide-y > * + * {
+    border-top: 1px solid #eee !important;
+  }
+
+  /* Item Styles */
+  .hover\:bg-muted\/50:hover {
+    background: transparent !important;
+  }
+
+  /* Logo */
+  img {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  /* Hide Print-specific Elements */
+  .print-hide {
+    display: none !important;
+  }
 }

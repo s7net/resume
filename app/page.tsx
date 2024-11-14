@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4 fade-in-up !delay-900">
+      <section className="grid gap-4 fade-in-up !delay-1000">
         <h2>Open Source</h2>
         <div className="grid divide-y">
           {openSource.map((item) => (
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <p className="text-muted-foreground text-xs fade-in-up !delay-900">
+      <p className="text-muted-foreground text-xs fade-in-up !delay-1000">
         &copy; {new Date().getFullYear()} {intro.name}
       </p>
     </main>
