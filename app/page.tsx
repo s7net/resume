@@ -7,7 +7,7 @@ export default function Home() {
       <Intro intro={intro} />
 
       <section className="grid gap-4">
-        <h2 className="font-semibold">Work</h2>
+        <h2>Work</h2>
         <div className="grid divide-y">
           {work.map((item) => (
             <Item key={item.title} {...item} />
@@ -16,7 +16,7 @@ export default function Home() {
       </section>
 
       <section className="grid gap-4">
-        <h2 className="font-semibold">Education</h2>
+        <h2>Education</h2>
         <div className="grid divide-y">
           {education.map((item) => (
             <Item key={item.title} {...item} />
@@ -25,7 +25,7 @@ export default function Home() {
       </section>
 
       <section className="grid gap-4">
-        <h2 className="font-semibold">Projects</h2>
+        <h2>Projects</h2>
         <div className="grid divide-y">
           {projects.map((item) => (
             <Item key={item.title} {...item} />
@@ -34,7 +34,7 @@ export default function Home() {
       </section>
 
       <section className="grid gap-4">
-        <h2 className="font-semibold">Open Source</h2>
+        <h2>Open Source</h2>
         <div className="grid divide-y">
           {openSource.map((item) => (
             <Item key={item.title} {...item} />
@@ -48,9 +48,7 @@ export default function Home() {
 const Intro = ({ intro }: any) => {
   return (
     <section className="grid gap-4">
-      <div className="flex items-center justify-between">
-        <h1 className="text-lg font-semibold">{intro.name}</h1>
-      </div>
+      <h1>{intro.name}</h1>
 
       <div className="dont-print flex gap-4">
         <a href={intro.href} target="_blank">
