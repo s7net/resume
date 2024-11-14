@@ -1,6 +1,9 @@
 import { intro, work, education, projects, openSource } from "@/lib/content";
 import { Copy } from "./copy";
 
+import Image from "next/image";
+import Logo from "@/public/logo.svg";
+
 export default function Home() {
   return (
     <main className="grid gap-8 max-w-4xl text-sm p-8">
@@ -48,6 +51,14 @@ export default function Home() {
 const Intro = ({ intro }: any) => {
   return (
     <section className="grid gap-4">
+      <Image
+        src={Logo}
+        alt={intro.name}
+        width={48}
+        height={39.09}
+        className="invert dark:invert-0 mb-8"
+      />
+
       <h1>{intro.name}</h1>
 
       <div className="dont-print flex gap-4">
