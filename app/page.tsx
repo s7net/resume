@@ -60,7 +60,7 @@ const Intro = ({ intro }: any) => {
         alt={intro.name}
         width={48}
         height={39.09}
-        className="invert dark:invert-0 mb-8"
+        className="invert dark:invert-0 mb-8 fade-in-up !delay-200"
       />
 
       <h1>{intro.name}</h1>
