@@ -9,7 +9,7 @@ export default function Home() {
     <main className="grid gap-8 max-w-4xl text-sm p-8">
       <Intro intro={intro} />
 
-      <section className="grid gap-4">
+      <section className="grid gap-4 fade-in-up !delay-300">
         <h2>Work</h2>
         <div className="grid divide-y">
           {work.map((item) => (
@@ -18,7 +18,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4">
+      <section className="grid gap-4 fade-in-up !delay-500">
         <h2>Education</h2>
         <div className="grid divide-y">
           {education.map((item) => (
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4">
+      <section className="grid gap-4 fade-in-up !delay-700">
         <h2>Projects</h2>
         <div className="grid divide-y">
           {projects.map((item) => (
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid gap-4">
+      <section className="grid gap-4 fade-in-up !delay-900">
         <h2>Open Source</h2>
         <div className="grid divide-y">
           {openSource.map((item) => (
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <p className="text-muted-foreground text-xs">
+      <p className="text-muted-foreground text-xs fade-in-up !delay-900">
         © {new Date().getFullYear()} {intro.name}
       </p>
     </main>
@@ -60,12 +60,12 @@ const Intro = ({ intro }: any) => {
         alt={intro.name}
         width={48}
         height={39.09}
-        className="invert dark:invert-0 mb-8 fade-in-up !delay-200"
+        className="invert dark:invert-0 mb-8 fade-in-up"
       />
 
-      <h1>{intro.name}</h1>
+      <h1 className="fade-in-up !delay-100">{intro.name}</h1>
 
-      <div className="dont-print flex gap-4">
+      <div className="dont-print flex gap-4 fade-in-up !delay-200">
         <a href={intro.href} target="_blank">
           Portfolio
         </a>
@@ -78,7 +78,9 @@ const Intro = ({ intro }: any) => {
         <Copy text={intro.email}>Email</Copy>
       </div>
 
-      <p className="text-muted-foreground max-w-prose">{intro.about}</p>
+      <p className="text-muted-foreground max-w-prose fade-in-up !delay-300">
+        {intro.about}
+      </p>
     </section>
   );
 };

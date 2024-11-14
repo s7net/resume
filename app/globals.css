@@ -90,6 +90,11 @@ h2 {
 
 /* Animation Styles */
 
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 800ms ease-in-out forwards;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -99,8 +104,4 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.fade-in-up {
-  animation: fadeInUp 500ms ease-out;
 }
