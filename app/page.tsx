@@ -1,6 +1,12 @@
 import { intro, work, education, projects, openSource } from "@/lib/content";
+import type {
+  Intro,
+  ResumeItem,
+  EducationItem,
+  ProjectItem,
+  OpenSourceItem,
+} from "@/lib/content";
 import { Copy } from "./copy";
-
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
 
@@ -46,13 +52,17 @@ export default function Home() {
       </section>
 
       <p className="text-muted-foreground text-xs fade-in-up !delay-900">
-        © {new Date().getFullYear()} {intro.name}
+        &copy; {new Date().getFullYear()} {intro.name}
       </p>
     </main>
   );
 }
 
-const Intro = ({ intro }: any) => {
+interface IntroProps {
+  intro: Intro;
+}
+
+function Intro({ intro }: IntroProps) {
   return (
     <section className="grid gap-4">
       <Image
@@ -83,21 +93,17 @@ const Intro = ({ intro }: any) => {
       </p>
     </section>
   );
-};
+}
 
-const Item = ({
-  title,
-  date,
-  description,
-  href,
-  location,
-}: {
+type ItemProps = {
   title: string;
   date?: string;
   description: string[];
   href?: string;
   location?: string;
-}) => {
+};
+
+function Item({ title, date, description, href, location }: ItemProps) {
   return (
     <section className="grid sm:grid-cols-[1fr_2fr] py-3 gap-2 px-3 -mx-3 hover:bg-muted/50 transition-all">
       <div>
@@ -110,23 +116,16 @@ const Item = ({
             title
           )}
         </h3>
-        {date && <p className="text-muted-foreground text-xs mt-1">{date}</p>}
-        {location && (
-          <p className="text-muted-foreground text-xs">{location}</p>
-        )}
+        {date && <p className="text-muted-foreground">{date}</p>}
+        {location && <p className="text-muted-foreground">{location}</p>}
       </div>
-
-      <ul>
-        {description.map((item) => (
-          <li
-            key={item}
-            className="grid grid-cols-[auto_1fr] items-baseline gap-1"
-          >
-            <p className="text-muted-foreground/50 text-xs">{">"}</p>{" "}
-            <p>{item}</p>
-          </li>
+      <div className="grid gap-1">
+        {description.map((item, i) => (
+          <p key={i} className="text-muted-foreground">
+            {item}
+          </p>
         ))}
-      </ul>
+      </div>
     </section>
   );
-};
+}

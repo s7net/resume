@@ -1,4 +1,40 @@
-export const intro = {
+export interface Intro {
+  name: string;
+  about: string;
+  href: string;
+  github: string;
+  linkedin: string;
+  email: string;
+}
+
+export interface ResumeItem {
+  title: string;
+  href?: string;
+  date?: string;
+  location?: string;
+  description: string[];
+}
+
+export interface EducationItem extends ResumeItem {
+  title: string;
+  date: string;
+  location: string;
+  description: string[];
+}
+
+export interface ProjectItem extends ResumeItem {
+  title: string;
+  href: string;
+  description: string[];
+}
+
+export interface OpenSourceItem extends ResumeItem {
+  title: string;
+  href: string;
+  description: string[];
+}
+
+export const intro: Intro = {
   name: "Bridger Tower",
   about:
     "I'm a designer and developer specializing in creating intuitive, high-performance software and websites that merge visual excellence with practical functionality. I am passionate about human computer interaction, usability, and aesthetics in software and technology.",
@@ -8,7 +44,7 @@ export const intro = {
   email: "bridgertower@gmail.com",
 };
 
-export const work = [
+export const work: ResumeItem[] = [
   {
     title: "Design Engineer at Ampry",
     href: "https://ampry.com",
@@ -66,7 +102,7 @@ export const work = [
   },
 ];
 
-export const education = [
+export const education: EducationItem[] = [
   {
     title: "BA Advertising at BYU",
     date: "2018 to 2022",
@@ -89,7 +125,7 @@ export const education = [
   },
 ];
 
-export const projects = [
+export const projects: ProjectItem[] = [
   {
     title: "Outr.ai",
     href: "https://outr.ai",
@@ -119,7 +155,7 @@ export const projects = [
   },
 ];
 
-export const openSource = [
+export const openSource: OpenSourceItem[] = [
   {
     title: "Router.so",
     href: "https://router.so",
