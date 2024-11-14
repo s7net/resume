@@ -1,11 +1,5 @@
 import { intro, work, education, projects, openSource } from "@/lib/content";
-import type {
-  Intro,
-  ResumeItem,
-  EducationItem,
-  ProjectItem,
-  OpenSourceItem,
-} from "@/lib/content";
+import type { Intro } from "@/lib/content";
 import { Copy } from "./copy";
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
