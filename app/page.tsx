@@ -44,6 +44,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <p className="text-muted-foreground text-xs">
+        © {new Date().getFullYear()} {intro.name}
+      </p>
     </main>
   );
 }
