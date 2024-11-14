@@ -1,42 +1,13 @@
 import { intro, work, education, projects, openSource } from "@/lib/content";
+import { Copy } from "./copy";
 
 export default function Home() {
   return (
     <main className="grid gap-8 max-w-4xl text-sm p-8">
+      <Intro intro={intro} />
+
       <section className="grid gap-4">
-        <div className="flex items-center justify-between">
-          <h1>{intro.name}</h1>
-        </div>
-
-        <div className="dont-print flex gap-4">
-          <a
-            className="text-muted-foreground hover:text-foreground transition-all"
-            href={intro.href}
-            target="_blank"
-          >
-            Portfolio
-          </a>
-          <a
-            className="text-muted-foreground hover:text-foreground transition-all"
-            href={intro.github}
-            target="_blank"
-          >
-            Github
-          </a>
-          <a
-            className="text-muted-foreground hover:text-foreground transition-all"
-            href={intro.linkedin}
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-        </div>
-
-        <p className="text-muted-foreground max-w-prose">{intro.about}</p>
-      </section>
-
-      <section>
-        <h2>Work</h2>
+        <h2 className="font-semibold">Work</h2>
         <div className="grid divide-y">
           {work.map((item) => (
             <Item key={item.title} {...item} />
@@ -44,8 +15,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2>Education</h2>
+      <section className="grid gap-4">
+        <h2 className="font-semibold">Education</h2>
         <div className="grid divide-y">
           {education.map((item) => (
             <Item key={item.title} {...item} />
@@ -53,8 +24,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2>Projects</h2>
+      <section className="grid gap-4">
+        <h2 className="font-semibold">Projects</h2>
         <div className="grid divide-y">
           {projects.map((item) => (
             <Item key={item.title} {...item} />
@@ -62,8 +33,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <h2>Open Source</h2>
+      <section className="grid gap-4">
+        <h2 className="font-semibold">Open Source</h2>
         <div className="grid divide-y">
           {openSource.map((item) => (
             <Item key={item.title} {...item} />
@@ -73,6 +44,31 @@ export default function Home() {
     </main>
   );
 }
+
+const Intro = ({ intro }: any) => {
+  return (
+    <section className="grid gap-4">
+      <div className="flex items-center justify-between">
+        <h1 className="text-lg font-semibold">{intro.name}</h1>
+      </div>
+
+      <div className="dont-print flex gap-4">
+        <a href={intro.href} target="_blank">
+          Portfolio
+        </a>
+        <a href={intro.github} target="_blank">
+          Github
+        </a>
+        <a href={intro.linkedin} target="_blank">
+          LinkedIn
+        </a>
+        <Copy text={intro.email}>Email</Copy>
+      </div>
+
+      <p className="text-muted-foreground max-w-prose">{intro.about}</p>
+    </section>
+  );
+};
 
 const Item = ({
   title,

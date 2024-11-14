@@ -4,6 +4,7 @@ import "./globals.css";
 import "./print.css";
 import { intro } from "@/lib/content";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} sm:p-12 antialiased`}
       >
         {children}
+        <Toaster position="top-right" />
         <Analytics />
       </body>
     </html>

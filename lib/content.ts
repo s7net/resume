@@ -5,6 +5,7 @@ export const intro = {
   href: "https://bridger.to",
   github: "https://github.com/brijr",
   linkedin: "https://linkedin.com/in/brdgr",
+  email: "bridgertower@gmail.com",
 };
 
 export const work = [
