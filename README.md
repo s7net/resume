@@ -1,8 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Template
+
+A minimalist, responsive resume template built with Next.js 14, TypeScript, and Tailwind CSS. Perfect for developers and designers who want to showcase their work in a clean, professional format.
+
+🔗 [Live Demo](https://resume.bridger.to)
+
+## Features
+
+- 🚀 Built with Next.js 14 (App Router)
+- 💨 Tailwind CSS for styling
+- 📱 Fully responsive design
+- 🌗 Light/Dark mode support
+- 📄 PDF download functionality
+- 📋 Copy-to-clipboard for contact information
+- 🎨 Customizable content through simple content files
+- 🖨 Print-friendly styling
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository:
+
+```bash
+git clone [your-repo-url]
+cd resume
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +42,41 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) to view your resume
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Content
 
-## Learn More
+Edit your resume content in `/lib/content.ts`. The content is structured in sections:
 
-To learn more about Next.js, take a look at the following resources:
+- Intro (personal information)
+- Work Experience
+- Education
+- Projects
+- Open Source Contributions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Styling
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Main styles are in `app/globals.css`
+- Print-specific styles are in `app/print.css`
+- The template uses Tailwind CSS for styling - customize the theme in `tailwind.config.ts`
 
-## Deploy on Vercel
+### PDF Download
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Place your PDF version in the `public` directory
+2. Update the `pdfUrl` prop in `app/page.tsx` to point to your PDF file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+Deploy your resume site using [Vercel](https://vercel.com):
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&project-name=resume&repository-name=resume&redirect-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&demo-title=Next.js%2015%20Resume%20Tempalte%20&demo-url=https%3A%2F%2Fresume.bridger.to)
+
+## License
+
+MIT License - Feel free to use this template for your own resume!
+
+Created by [Bridger Tower](https://bridger.to)
