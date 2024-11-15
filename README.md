@@ -9,7 +9,6 @@ A minimalist, responsive resume template built with Next.js 14, TypeScript, and 
 - 🚀 Built with Next.js 14 (App Router)
 - 💨 Tailwind CSS for styling
 - 📱 Fully responsive design
-- 🌗 Light/Dark mode support
 - 📄 PDF download functionality
 - 📋 Copy-to-clipboard for contact information
 - 🎨 Customizable content through simple content files
