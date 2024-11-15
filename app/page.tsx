@@ -107,9 +107,9 @@ type ItemProps = {
 
 function Item({ title, date, description, href, location }: ItemProps) {
   return (
-    <section className="grid sm:grid-cols-[1fr_2fr] py-3 gap-2 px-3 -mx-3 hover:bg-muted/50 transition-all">
+    <section className="grid sm:grid-cols-[1fr_2fr] py-3 gap-5 sm:gap-2 px-3 -mx-3 hover:bg-muted/50 transition-all">
       <div>
-        <h3 className="font-medium">
+        <h3 className="font-medium mb-4 sm:mb-0">
           {href ? (
             <a href={href} target="_blank" rel="noopener noreferrer">
               {title}
@@ -118,8 +118,12 @@ function Item({ title, date, description, href, location }: ItemProps) {
             title
           )}
         </h3>
-        {date && <p className="text-muted-foreground">{date}</p>}
-        {location && <p className="text-muted-foreground">{location}</p>}
+        {date && (
+          <p className="text-muted-foreground text-xs sm:text-sm">{date}</p>
+        )}
+        {location && (
+          <p className="text-muted-foreground text-xs sm:text-sm">{location}</p>
+        )}
       </div>
       <div className="grid gap-1">
         {description.map((item, i) => (
