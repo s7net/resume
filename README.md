@@ -1,6 +1,6 @@
 # Resume Template
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&project-name=resume&repository-name=resume&redirect-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&demo-title=Next.js%2015%20Resume%20Tempalte%20&demo-url=https%3A%2F%2Fresume.bridger.to)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&project-name=resume&repository-name=resume&redirect-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&demo-title=Next.js%2015%20Resume%20Template%20&demo-url=https%3A%2F%2Fresume.bridger.to)
 
 A minimalist, responsive resume template built with Next.js 15, TypeScript, and Tailwind CSS. Perfect for developers and designers who want to showcase their work in a clean, professional format.
 
@@ -74,7 +74,7 @@ Edit your resume content in `/lib/content.ts`. The content is structured in sect
 
 Deploy your resume site using [Vercel](https://vercel.com):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&project-name=resume&repository-name=resume&redirect-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&demo-title=Next.js%2015%20Resume%20Tempalte%20&demo-url=https%3A%2F%2Fresume.bridger.to)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&project-name=resume&repository-name=resume&redirect-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&demo-title=Next.js%2015%20Resume%20Template%20&demo-url=https%3A%2F%2Fresume.bridger.to)
 
 ## License
 
