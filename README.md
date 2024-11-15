@@ -1,5 +1,7 @@
 # Resume Template
 
+![CleanShot 2024-11-14 at 16 25 21@2x](https://github.com/user-attachments/assets/db375335-04d7-4041-8156-c5dab1928f35)
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&project-name=resume&repository-name=resume&redirect-url=https%3A%2F%2Fgithub.com%2Fbrijr%2Fresume&demo-title=Next.js%2015%20Resume%20Template%20&demo-url=https%3A%2F%2Fresume.bridger.to)
 
 A minimalist, responsive resume template built with Next.js 15, TypeScript, and Tailwind CSS. Perfect for developers and designers who want to showcase their work in a clean, professional format.
