@@ -81,7 +81,13 @@ function Intro({ intro }: IntroProps) {
           LinkedIn
         </a>
         <Copy text={intro.email}>Email</Copy>
-        <DownloadPDF pdfUrl="/bridger_tower_resume_2024.pdf" />
+        <DownloadPDF
+          pdfUrl="../resume.pdf"
+          fileName={`${intro.name
+            .toString()
+            .toLowerCase()
+            .replace(/\s/g, "_")}_resume_2024.pdf`}
+        />
       </div>
 
       <p className="text-muted-foreground max-w-prose fade-in-up !delay-300">
