@@ -3,7 +3,7 @@ import type { Intro } from "@/lib/content";
 import { Copy } from "@/components/copy";
 import Image from "next/image";
 import Logo from "@/public/logo.svg";
-// import { DownloadPDF } from "@/components/download";
+import { DownloadPDF } from "@/components/download";
 
 export default function Home() {
   return (
@@ -81,7 +81,7 @@ function Intro({ intro }: IntroProps) {
           LinkedIn
         </a>
         <Copy text={intro.email}>Email</Copy>
-        {/* <DownloadPDF /> */}
+        <DownloadPDF pdfUrl="/bridger_tower_resume_2024.pdf" />
       </div>
 
       <p className="text-muted-foreground max-w-prose fade-in-up !delay-300">

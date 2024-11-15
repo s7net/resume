@@ -2,14 +2,22 @@
 
 import { toast } from "sonner";
 
-export function DownloadPDF() {
-  const generatePDF = async () => {
-    const loadingToastId = toast.loading("Generating PDF...");
+interface DownloadPDFProps {
+  pdfUrl: string;
+  fileName?: string;
+}
+
+export function DownloadPDF({
+  pdfUrl,
+  fileName = "resume.pdf",
+}: DownloadPDFProps) {
+  const handleDownload = async () => {
+    const loadingToastId = toast.loading("Downloading PDF...");
 
     try {
-      const response = await fetch("/api/generate-pdf");
+      const response = await fetch(pdfUrl);
 
-      if (!response.ok) throw new Error("Failed to generate PDF");
+      if (!response.ok) throw new Error("Failed to download PDF");
 
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
@@ -17,25 +25,28 @@ export function DownloadPDF() {
       // Create link and trigger download
       const link = document.createElement("a");
       link.href = url;
-      link.download = "resume.pdf";
+      link.download = fileName;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
+
+      // Cleanup
+      window.URL.revokeObjectURL(url);
 
       toast.dismiss(loadingToastId);
       toast.success("PDF downloaded successfully!");
     } catch (error) {
       console.error("Error:", error);
       toast.dismiss(loadingToastId);
-      toast.error("Failed to generate PDF. Please try again.");
+      toast.error("Failed to download PDF. Please try again.");
     }
   };
 
   return (
     <button
-      onClick={generatePDF}
+      onClick={handleDownload}
       className="link"
-      aria-label="Download resume as PDF"
+      aria-label={`Download ${fileName}`}
     >
       Download
     </button>
