@@ -23,7 +23,7 @@ A minimalist, responsive resume template built with Next.js 15, TypeScript, and 
 1. Clone this repository:
 
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/brijr/resume
 cd resume
 ```
 
