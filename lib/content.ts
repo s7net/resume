@@ -40,7 +40,7 @@ export const intro: Intro = {
     "I'm a designer and developer specializing in creating intuitive, high-performance software and websites that merge visual excellence with practical functionality. I am passionate about human computer interaction, usability, and aesthetics in software and technology.",
   href: "https://bridger.to",
   github: "https://github.com/brijr",
-  linkedin: "https://linkedin.com/in/brdgr",
+  linkedin: "https://linkedin.com/in/brijr",
   email: "bridgertower@gmail.com",
 };
 
