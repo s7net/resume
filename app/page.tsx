@@ -2,7 +2,7 @@ import { intro, work, education, projects, openSource } from "@/lib/content";
 import type { Intro } from "@/lib/content";
 import { Copy } from "@/components/copy";
 import Image from "next/image";
-import Logo from "@/public/logo.svg";
+import Logo from "@/public/cube.png";
 import { DownloadPDF } from "@/components/download";
 
 export default function Home() {
