@@ -36,8 +36,7 @@ export interface OpenSourceItem extends ResumeItem {
 
 export const intro: Intro = {
   name: "AmirHossein Soleimani",
-  about:
-    "I'm a Backend Developer && DevOps Specialist",
+  about: "I'm a Backend Developer and DevOps Specialist",
   href: "https://s7net.ir",
   github: "https://github.com/s7net",
   linkedin: "https://www.linkedin.com/in/s7net/",
@@ -51,7 +50,7 @@ export const work: ResumeItem[] = [
     date: "2025 - Present",
     location: "Remote (Work from Home)",
     description: [
-      "Handling support tickets for C.O.C support",
+      "Handling C.O.C support tickets",
       "Managing hosting environments: DirectAdmin, cPanel, aaPanel",
       "WHMCS administration and maintenance",
       "Automating server deployments with Bash scripts",
@@ -68,11 +67,11 @@ export const work: ResumeItem[] = [
     description: [
       "Developing and maintaining Telegram bot projects using aiogram",
       "Optimizing source code for performance and scalability",
-      "Providing REST web services using Sanic framework",
+      "Providing REST web services using the Sanic framework",
       "Containerizing applications with Docker for easier deployment",
       "Implementing and managing databases (SQL) for efficient data storage",
       "Working with Python libraries for backend development",
-      "Using Docker for consistent development environments",
+      "Utilizing Docker to ensure consistent development environments",
     ],
   },
   {
@@ -90,7 +89,6 @@ export const work: ResumeItem[] = [
     ],    
   },
 ];
-
 
 export const education: EducationItem[] = [
   {
@@ -134,24 +132,22 @@ export const education: EducationItem[] = [
   },
 ];
 
-
 export const projects: ProjectItem[] = [
   {
-    title: "Nothing",
+    title: "Contributions to Other Projects",
     href: "https://",
     description: [
-      "I'm not project owner but help to develop other projects",
+      "I'm not a project owner, but I contribute to other projects",
     ],
   },
 ];
 
 export const openSource: OpenSourceItem[] = [
-
   {
-    title: "Nothing",
+    title: "Private Projects",
     href: "https://",
     description: [
-      "I'm not publish my private prjects",
+      "I haven't published my private projects",
     ],
   },
 ];
