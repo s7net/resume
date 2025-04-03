@@ -60,13 +60,15 @@ interface IntroProps {
 function Intro({ intro }: IntroProps) {
   return (
     <section className="grid gap-4">
-      <Image
-        src={Logo}
-        alt={intro.name}
-        width={48}
-        height={39.09}
-        className="invert dark:invert-0 mb-8 fade-in-up"
-      />
+    <Image
+      src={Logo}
+      alt={intro.name}
+      width={48}
+      height={39.09}
+      className="mb-8 fade-in-up"
+      style={{ filter: 'invert(33%) sepia(100%) saturate(500%) hue-rotate(170deg)' }}
+    />
+
 
       <h1 className="fade-in-up !delay-100">{intro.name}</h1>
 
