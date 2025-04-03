@@ -135,71 +135,23 @@ export const education: EducationItem[] = [
 ];
 
 
-// export const projects: ProjectItem[] = [
-//   {
-//     title: "Outr.ai",
-//     href: "https://outr.ai",
-//     description: [
-//       "AI agents for scaling sales outreach",
-//       "Role: Product Designer, AI Engineer, and Design Engineer",
-//       "Built with Typescript and Next.js",
-//     ],
-//   },
-//   {
-//     title: "WaveFinder",
-//     href: "https://wavefinder.io",
-//     description: [
-//       "Marketing message testing powered by AI",
-//       "Role: Product Designer, AI Engineer, and Design Engineer",
-//       "Built with Typescript and Next.js",
-//     ],
-//   },
-//   {
-//     title: "Swyftfin",
-//     href: "https://swyftfin.com",
-//     description: [
-//       "Portable lending platform for home service providers",
-//       "Role: Product Designer and Design Engineer",
-//       "Built with Typescript and Next.js",
-//     ],
-//   },
-// ];
+export const projects: ProjectItem[] = [
+  {
+    title: "Nothing",
+    href: "https://",
+    description: [
+      "I'm not project owner but help to develop other projects",
+    ],
+  },
+];
 
-// export const openSource: OpenSourceItem[] = [
-//   {
-//     title: "Router.so",
-//     href: "https://router.so",
-//     description: [
-//       "Headless lead router and form backend",
-//       "Role: Product Designer and Design Engineer",
-//       "200+ Stars on Github, 800+ Users",
-//     ],
-//   },
-//   {
-//     title: "Components",
-//     href: "https://components.bridger.to",
-//     description: [
-//       "Collection of components for building marketing websites",
-//       "Next.js, Tailwind, React, Typescript, and shadcn/ui",
-//       "260+ Stars on Github",
-//     ],
-//   },
-//   {
-//     title: "Craft Design System",
-//     href: "https://craft-ds.com",
-//     description: [
-//       "Design system for building websites FAST!",
-//       "Next.js, Tailwind, React, Typescript, and shadcn/ui",
-//       "170+ Stars on Github",
-//     ],
-//   },
-//   {
-//     title: "Next WP",
-//     href: "https://wp.9d8.dev",
-//     description: [
-//       "Wordpress as a headless CMS using Next.js",
-//       "Featured by Vercel as a template",
-//       "620+ Stars on Github",
-//     ],
-//   },
-// ];
+export const openSource: OpenSourceItem[] = [
+
+  {
+    title: "Nothing",
+    href: "https://",
+    description: [
+      "I'm not publish my private prjects",
+    ],
+  },
+];
