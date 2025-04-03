@@ -46,150 +46,160 @@ export const intro: Intro = {
 
 export const work: ResumeItem[] = [
   {
-    title: "Design Engineer at Ampry",
-    href: "https://ampry.com",
-    date: "2023 to Present",
-    location: "Pleasant Grove, UT",
+    title: "DevOps Engineer at IranServer",
+    href: "https://iranserver.com",
+    date: "2025 - Present",
+    location: "Remote (Work from Home)",
     description: [
-      "Lead product engineering initiatives and design system architecture",
-      "Drive technical implementation of component libraries",
-      "Manage end-to-end product development workflows",
+      "Handling support tickets for C.O.C support",
+      "Managing hosting environments: DirectAdmin, cPanel, aaPanel",
+      "WHMCS administration and maintenance",
+      "Automating server deployments with Bash scripts",
+      "Server management and monitoring using tools like Nagios and Prometheus",
+      "Managing cloud infrastructure for performance and scalability",
+      "Maintaining server security and conducting vulnerability assessments",
+    ],    
+  },
+  {
+    title: "Freelance Project (aiogram & Sanic)",
+    href: "https://t.me",
+    date: "2022 - 2025",
+    location: "Remote (Work from Home)",
+    description: [
+      "Developing and maintaining Telegram bot projects using aiogram",
+      "Optimizing source code for performance and scalability",
+      "Providing REST web services using Sanic framework",
+      "Containerizing applications with Docker for easier deployment",
+      "Implementing and managing databases (SQL) for efficient data storage",
+      "Working with Python libraries for backend development",
+      "Using Docker for consistent development environments",
     ],
   },
   {
-    title: "Design Engineer at 9d8",
-    href: "https://9d8.dev",
-    date: "2021 to Present",
-    location: "Remote",
+    title: "Xray-Core Expert",
+    href: "https://github.com/XTLS/Xray-core",
+    date: "2023 - Present",
+    location: "Remote (Work from Home)",
     description: [
-      "Design and develop AI-powered solutions for marketing and sales teams",
-      "Create scalable systems that enhance client workflow efficiency",
-      "Implement cutting-edge AI technologies in user-friendly interfaces",
-    ],
-  },
-  {
-    title: "Creative Developer at Tackle",
-    href: "https://tackle.io",
-    date: "2022 to 2023",
-    location: "Remote",
-    description: [
-      "Led development of design systems and technical architecture",
-      "Improved site performance metrics while scaling development workflows",
-      "Implemented automated testing and deployment processes",
-    ],
-  },
-  {
-    title: "Founding Designer at Ampry",
-    href: "https://ampry.com",
-    date: "2020 to 2022",
-    location: "Pleasant Grove, UT",
-    description: [
-      "Built scalable design systems for CRO tech startup from ground up",
-      "Developed and implemented conversion optimization strategies",
-      "Assisted in significant conversion improvements across 200+ clients",
-    ],
-  },
-  {
-    title: "Designer at Zion",
-    href: "https://zion.surf",
-    date: "2018 to 2022",
-    location: "Lehi, UT",
-    description: [
-      "Collaborated with 100+ brands and marketing agencies",
-      "Created cohesive visual narratives across multiple platforms",
-      "Mediums include brand, web, social, product, and publication design",
-    ],
+      "Setting up and configuring Xray-Core for proxy services",
+      "Designing custom Xray configurations for network requirements",
+      "Monitoring and troubleshooting Xray server performance",
+      "Optimizing Xray server for high traffic and low latency",
+      "Managing Xray-Core servers using Docker for deployment",
+      "Providing support and consultation for Xray-Core configurations",
+    ],    
   },
 ];
+
 
 export const education: EducationItem[] = [
   {
-    title: "BA Advertising at BYU",
-    date: "2018 to 2022",
-    location: "Provo, UT",
+    title: "BA in Computer Science at Azad University of Qom",
+    date: "2022 - Present",
+    location: "Qom, Iran",
     description: [
-      "Focus: Brand strategy and communication design",
-      "Developed expertise in account leadership and growth marketing",
-      "Led multiple award-winning campaign projects",
+      "Focus: Software engineering and development",
+      "Specialized in backend development and automation",
+      "Participating in various technical and programming projects",
     ],
   },
   {
-    title: "UX Design Certificate at Google",
-    date: "2020 to 2021",
+    title: "Python Course at GreenLearn",
+    date: "2023",
     location: "Remote",
     description: [
-      "Mastered user journey mapping and wireframing techniques",
-      "Completed 5 end-to-end product design projects",
-      "Applied UX principles to real-world client challenges",
+      "Completed a comprehensive course on Python programming",
+      "Focused on object-oriented programming, web development, and automation",
+    ],
+  },
+  {
+    title: "PHP Course at SevenLearn",
+    date: "2023",
+    location: "Remote",
+    description: [
+      "Learned PHP for web development and backend programming",
+      "Built real-world projects and APIs using PHP",
+    ],
+  },
+  {
+    title: "Docker, HTML, CSS, Git, and Linux Skills",
+    date: "2023 - Present",
+    location: "Remote",
+    description: [
+      "Proficient in using Docker for containerization and managing environments",
+      "Skilled in frontend development with HTML and CSS for building user interfaces",
+      "Experienced with Git for version control and collaboration in software development",
+      "Familiar with Linux environments for server management and deployment",
     ],
   },
 ];
 
-export const projects: ProjectItem[] = [
-  {
-    title: "Outr.ai",
-    href: "https://outr.ai",
-    description: [
-      "AI agents for scaling sales outreach",
-      "Role: Product Designer, AI Engineer, and Design Engineer",
-      "Built with Typescript and Next.js",
-    ],
-  },
-  {
-    title: "WaveFinder",
-    href: "https://wavefinder.io",
-    description: [
-      "Marketing message testing powered by AI",
-      "Role: Product Designer, AI Engineer, and Design Engineer",
-      "Built with Typescript and Next.js",
-    ],
-  },
-  {
-    title: "Swyftfin",
-    href: "https://swyftfin.com",
-    description: [
-      "Portable lending platform for home service providers",
-      "Role: Product Designer and Design Engineer",
-      "Built with Typescript and Next.js",
-    ],
-  },
-];
 
-export const openSource: OpenSourceItem[] = [
-  {
-    title: "Router.so",
-    href: "https://router.so",
-    description: [
-      "Headless lead router and form backend",
-      "Role: Product Designer and Design Engineer",
-      "200+ Stars on Github, 800+ Users",
-    ],
-  },
-  {
-    title: "Components",
-    href: "https://components.bridger.to",
-    description: [
-      "Collection of components for building marketing websites",
-      "Next.js, Tailwind, React, Typescript, and shadcn/ui",
-      "260+ Stars on Github",
-    ],
-  },
-  {
-    title: "Craft Design System",
-    href: "https://craft-ds.com",
-    description: [
-      "Design system for building websites FAST!",
-      "Next.js, Tailwind, React, Typescript, and shadcn/ui",
-      "170+ Stars on Github",
-    ],
-  },
-  {
-    title: "Next WP",
-    href: "https://wp.9d8.dev",
-    description: [
-      "Wordpress as a headless CMS using Next.js",
-      "Featured by Vercel as a template",
-      "620+ Stars on Github",
-    ],
-  },
-];
+// export const projects: ProjectItem[] = [
+//   {
+//     title: "Outr.ai",
+//     href: "https://outr.ai",
+//     description: [
+//       "AI agents for scaling sales outreach",
+//       "Role: Product Designer, AI Engineer, and Design Engineer",
+//       "Built with Typescript and Next.js",
+//     ],
+//   },
+//   {
+//     title: "WaveFinder",
+//     href: "https://wavefinder.io",
+//     description: [
+//       "Marketing message testing powered by AI",
+//       "Role: Product Designer, AI Engineer, and Design Engineer",
+//       "Built with Typescript and Next.js",
+//     ],
+//   },
+//   {
+//     title: "Swyftfin",
+//     href: "https://swyftfin.com",
+//     description: [
+//       "Portable lending platform for home service providers",
+//       "Role: Product Designer and Design Engineer",
+//       "Built with Typescript and Next.js",
+//     ],
+//   },
+// ];
+
+// export const openSource: OpenSourceItem[] = [
+//   {
+//     title: "Router.so",
+//     href: "https://router.so",
+//     description: [
+//       "Headless lead router and form backend",
+//       "Role: Product Designer and Design Engineer",
+//       "200+ Stars on Github, 800+ Users",
+//     ],
+//   },
+//   {
+//     title: "Components",
+//     href: "https://components.bridger.to",
+//     description: [
+//       "Collection of components for building marketing websites",
+//       "Next.js, Tailwind, React, Typescript, and shadcn/ui",
+//       "260+ Stars on Github",
+//     ],
+//   },
+//   {
+//     title: "Craft Design System",
+//     href: "https://craft-ds.com",
+//     description: [
+//       "Design system for building websites FAST!",
+//       "Next.js, Tailwind, React, Typescript, and shadcn/ui",
+//       "170+ Stars on Github",
+//     ],
+//   },
+//   {
+//     title: "Next WP",
+//     href: "https://wp.9d8.dev",
+//     description: [
+//       "Wordpress as a headless CMS using Next.js",
+//       "Featured by Vercel as a template",
+//       "620+ Stars on Github",
+//     ],
+//   },
+// ];
