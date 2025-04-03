@@ -35,13 +35,13 @@ export interface OpenSourceItem extends ResumeItem {
 }
 
 export const intro: Intro = {
-  name: "Bridger Tower",
+  name: "AmirHossein Soleimani",
   about:
-    "I'm a designer and developer specializing in creating intuitive, high-performance software and websites that merge visual excellence with practical functionality. I am passionate about human computer interaction, usability, and aesthetics in software and technology.",
-  href: "https://bridger.to",
-  github: "https://github.com/brijr",
-  linkedin: "https://linkedin.com/in/brijr",
-  email: "bridgertower@gmail.com",
+    "I'm a Backend Developer && DevOps Specialist",
+  href: "https://s7net.ir",
+  github: "https://github.com/s7net",
+  linkedin: "https://www.linkedin.com/in/s7net/",
+  email: "info@s7net.ir",
 };
 
 export const work: ResumeItem[] = [
